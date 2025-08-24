@@ -10,7 +10,8 @@ async function getReleases(repository: string) {
     return cache.get(url.toString());
   }
 
-  const response = JSON.parse((await got(url)).body);
+  const options = process.env.GITHUB_TOKEN ? { headers: { Authorization: `token ${process.env.GITHUB_TOKEN}` } } : {};
+  const response = JSON.parse((await got(url, options)).body);
   cache.set(url.toString(), response);
   return response;
 }
@@ -22,7 +23,8 @@ async function getLatestRelease(repository: string) {
     return cache.get(url.toString());
   }
 
-  const response = JSON.parse((await got(url)).body);
+  const options = process.env.GITHUB_TOKEN ? { headers: { Authorization: `token ${process.env.GITHUB_TOKEN}` } } : {};
+  const response = JSON.parse((await got(url, options)).body);
   cache.set(url.toString(), response);
   return response;
 }
@@ -34,7 +36,8 @@ async function getReleaseByTag(repository: string, tag: string) {
     return cache.get(url.toString());
   }
 
-  const response = JSON.parse((await got(url)).body);
+  const options = process.env.GITHUB_TOKEN ? { headers: { Authorization: `token ${process.env.GITHUB_TOKEN}` } } : {};
+  const response = JSON.parse((await got(url, options)).body);
   cache.set(url.toString(), response);
   return response;
 }
