@@ -70,6 +70,13 @@ const downloadPageRouter = (options?: SiteConfiguration) => {
   }
   
   const getRelease = async () => {
+    try {
+      await GitHub.getRepo(siteConfiguration.application.github);
+    } catch (error) {
+      console.warn(`Repository not found: ${siteConfiguration.application.github}`);
+      return null;
+    }
+
     if (!siteConfiguration.application.tagName) {
       return await GitHub.getLatestRelease(siteConfiguration.application.github);
     }
@@ -147,6 +154,7 @@ const downloadPageRouter = (options?: SiteConfiguration) => {
     try {
       res.status(200).send(await loadIndex(req, 200, '/'));
     } catch (error) {
+      console.log(error);
       res.status(500).send(await loadIndex(req, 500));
     }
   });
