@@ -1,6 +1,4 @@
-# Github Download Page
-
-![Vercel Build](https://therealsujitk-vercel-badge.vercel.app/?app=github-download-page&logo=false) ![License](https://img.shields.io/badge/license-MIT-blue)
+# PEC Events App Download Page
 
 A beautiful download page for your GitHub project inspired by Google Play Store.
 
@@ -13,7 +11,7 @@ This package gives you an [express router](https://expressjs.com/en/5x/api.html#
 After this you can install this package using the following command.
 
 ```sh
-$ npm i therealsujitk/github-download-page#1.0.1
+$ npm i gideon-jacob/pec-events-app#1.0.0
 ```
 
 ### Example
@@ -22,7 +20,7 @@ Here's a simple example of an express application that uses this package.
 
 ```ts
 import express from 'express';
-import { downloadPageRouter } from 'github-download-page';
+import { downloadPageRouter } from 'pec-events-app-download-page';
 
 const app = express();
 const port = process.env.PORT || 3000;

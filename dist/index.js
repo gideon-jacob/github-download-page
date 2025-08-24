@@ -46,32 +46,32 @@ const downloadPageRouter = (options) => {
     const router = (0, express_1.Router)();
     const siteConfiguration = options !== null && options !== void 0 ? options : {
         application: {
-            name: "Material Components Catalog",
+            name: "PEC Events App",
             description: "This is a download page for your GitHub project inspired by Google Play Store. As an example I have used the material components for android catalog app to showcase this site. Click the GitHub link in the navigation bar to get your own copy.",
-            github: "material-components/material-components-android",
+            github: "gideon-jacob/pec-events-app",
             info: {
-                minimumRequirement: 'Android 6.0+',
-                releasedOn: new Date(2018, 10, 15),
+                minimumRequirement: 'Android 5.0+',
+                releasedOn: new Date(2023, 10, 1),
             }
         },
         developer: {
-            name: "Google LLC",
-            website: "https://android.com"
+            name: "Gideon Jacob",
+            website: "https://gideonjacob.com"
         },
         site: {
             primaryColor: "#03875F",
             links: [
                 {
                     name: "Developer",
-                    href: "https://therealsuji.tk"
+                    href: "https://gideonjacob.com"
                 },
                 {
                     name: "GitHub",
-                    href: "https://github.com/therealsujitk/github-download-page"
+                    href: "https://github.com/gideon-jacob/pec-events-app"
                 },
                 {
                     name: "Donate",
-                    href: "https://therealsuji.tk/donate"
+                    href: "https://gideonjacob.com/donate"
                 }
             ],
         },
@@ -81,14 +81,14 @@ const downloadPageRouter = (options) => {
                 {
                     "heading": "About this service",
                     "content": [
-                        "This service contains no ads whatsoever and is completely free of cost and open source. If you feel like supporting me, you can always leave a donation at [https://therealsuji.tk/donate](https://therealsuji.tk/donate)."
+                        "This service contains no ads whatsoever and is completely free of cost and open source. If you feel like supporting me, you can always leave a donation at [https://gideonjacob.com/donate](https://gideonjacob.com/donate)."
                     ]
                 },
                 {
                     "heading": "Contact us",
                     "content": [
                         "If you have any questions about this Privacy Policy, You can contact me:",
-                        "- By email: [me@example.com](mailto:me@example.com)\n- By visiting this page on our website: [https://example.com](https://example.com)"
+                        "- By email: [gideonjacob.com@gmail.com](mailto:gideonjacob.com@gmail.com)\n- By visiting this page on our website: [https://gideonjacob.com](https://gideonjacob.com)"
                     ]
                 }
             ]

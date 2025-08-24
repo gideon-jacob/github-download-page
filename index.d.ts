@@ -38,6 +38,6 @@ declare interface SiteConfiguration {
   },
 }
 
-declare module 'github-download-page' {
+declare module 'pec-events-app-download-page' {
   function downloadPageRouter(options?: SiteConfiguration): Router;
 }
