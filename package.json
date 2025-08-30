@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/gideon-jacob/pec-events-app/issues"
   },
-  "homepage": "https://github.com/gideon-jacob/pec-events-app#readme",
+  "homepage": "https://github.com/gideon-jacob/pec-events-app",
   "dependencies": {
     "date-fns": "^2.30.0",
     "got": "^11.8.2",

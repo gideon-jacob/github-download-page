@@ -15,13 +15,30 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const got_1 = __importDefault(require("got"));
 const node_cache_1 = __importDefault(require("node-cache"));
 const cache = new node_cache_1.default({ stdTTL: 21600, checkperiod: 3600 });
+function buildGitHubRequestOptions() {
+    const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
+    const headers = {
+        Accept: 'application/vnd.github+json',
+        'X-GitHub-Api-Version': '2022-11-28',
+        'User-Agent': 'pec-events-app-download-page',
+    };
+    if (token) {
+        headers['Authorization'] = `Bearer ${token}`;
+    }
+    return {
+        headers,
+        timeout: { request: 10000 },
+        retry: { limit: 2 },
+    };
+}
 function getReleases(repository) {
     return __awaiter(this, void 0, void 0, function* () {
         const url = new URL(`https://api.github.com/repos/${repository}/releases`);
         if (cache.has(url.toString())) {
             return cache.get(url.toString());
         }
-        const response = JSON.parse((yield (0, got_1.default)(url)).body);
+        const options = buildGitHubRequestOptions();
+        const response = JSON.parse((yield (0, got_1.default)(url, options)).body);
         cache.set(url.toString(), response);
         return response;
     });
@@ -32,7 +49,8 @@ function getLatestRelease(repository) {
         if (cache.has(url.toString())) {
             return cache.get(url.toString());
         }
-        const response = JSON.parse((yield (0, got_1.default)(url)).body);
+        const options = buildGitHubRequestOptions();
+        const response = JSON.parse((yield (0, got_1.default)(url, options)).body);
         cache.set(url.toString(), response);
         return response;
     });
@@ -43,7 +61,8 @@ function getReleaseByTag(repository, tag) {
         if (cache.has(url.toString())) {
             return cache.get(url.toString());
         }
-        const response = JSON.parse((yield (0, got_1.default)(url)).body);
+        const options = buildGitHubRequestOptions();
+        const response = JSON.parse((yield (0, got_1.default)(url, options)).body);
         cache.set(url.toString(), response);
         return response;
     });

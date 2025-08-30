@@ -46,7 +46,7 @@ const downloadPageRouter = (options?: SiteConfiguration) => {
         {
           "heading": "Introduction",
           "content": [
-            "Welcome to the Prathyusha Events App (\"we,\" \"us,\" or \"our\"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application (the \"App\"). Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the application."
+            "Welcome to the PEC Events App (\"we,\" \"us,\" or \"our\"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application (the \"App\"). Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the application."
           ]
         },
         {
