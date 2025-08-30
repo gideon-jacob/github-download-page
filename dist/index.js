@@ -46,49 +46,106 @@ const downloadPageRouter = (options) => {
     const router = (0, express_1.Router)();
     const siteConfiguration = options !== null && options !== void 0 ? options : {
         application: {
-            name: "Material Components Catalog",
+            name: "PEC Events App",
             description: "This is a download page for your GitHub project inspired by Google Play Store. As an example I have used the material components for android catalog app to showcase this site. Click the GitHub link in the navigation bar to get your own copy.",
-            github: "material-components/material-components-android",
+            github: "gideon-jacob/pec-events-app",
             info: {
-                minimumRequirement: 'Android 6.0+',
-                releasedOn: new Date(2018, 10, 15),
+                minimumRequirement: 'Android 5.0+',
+                releasedOn: new Date(2023, 10, 1),
             }
         },
         developer: {
-            name: "Google LLC",
-            website: "https://android.com"
+            name: "Gideon Jacob",
+            website: "https://gideonjacob.com"
         },
         site: {
             primaryColor: "#03875F",
             links: [
                 {
                     name: "Developer",
-                    href: "https://therealsuji.tk"
+                    href: "https://gideonjacob.com"
                 },
                 {
                     name: "GitHub",
-                    href: "https://github.com/therealsujitk/github-download-page"
+                    href: "https://github.com/gideon-jacob/pec-events-app"
                 },
                 {
                     name: "Donate",
-                    href: "https://therealsuji.tk/donate"
+                    href: "https://gideonjacob.com/donate"
                 }
             ],
         },
         privacyPolicy: {
-            lastUpdated: new Date(2023, 9, 16),
+            lastUpdated: new Date(2025, 7, 28),
             body: [
                 {
-                    "heading": "About this service",
+                    "heading": "Introduction",
                     "content": [
-                        "This service contains no ads whatsoever and is completely free of cost and open source. If you feel like supporting me, you can always leave a donation at [https://therealsuji.tk/donate](https://therealsuji.tk/donate)."
+                        "Welcome to the Prathyusha Events App (\"we,\" \"us,\" or \"our\"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application (the \"App\"). Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the application."
                     ]
                 },
                 {
-                    "heading": "Contact us",
+                    "heading": "Information We Collect",
                     "content": [
-                        "If you have any questions about this Privacy Policy, You can contact me:",
-                        "- By email: [me@example.com](mailto:me@example.com)\n- By visiting this page on our website: [https://example.com](https://example.com)"
+                        "We may collect information about you in a variety of ways. The information we may collect via the App depends on the content and materials you use, and includes:",
+                        "### Personal Data",
+                        "**Student Information:** To create an account, we require your full name, college registration number, department, and a valid college email address.",
+                        "**Publisher Information:** For faculty and club coordinators, we collect your name and department to create a publisher account.",
+                        "### Usage Data",
+                        "**App Activity:** We may collect information about your interactions with the App, such as which events you view and your responses to interest polls (\"Yes/No\"). This data is used to provide analytics to event organizers.",
+                        "**Device Information:** We automatically collect certain information about your mobile device, including your device's unique ID and operating system, to send push notifications."
+                    ]
+                },
+                {
+                    "heading": "How We Use Your Information",
+                    "content": [
+                        "Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the App to:",
+                        "- Create and manage your account.",
+                        "- Deliver push notifications about new events to your device.",
+                        "- Provide event organizers with anonymized interest analytics to help them plan better.",
+                        "- Monitor and analyze usage and trends to improve your experience with the App.",
+                        "- Ensure the security and operational functionality of our services."
+                    ]
+                },
+                {
+                    "heading": "Disclosure of Your Information",
+                    "content": [
+                        "We do not sell, trade, or rent your personal identification information to others. We may share information we have collected about you in certain situations. Your information may be disclosed as follows:",
+                        "### By Law or to Protect Rights",
+                        "If we believe the release of information about you is necessary to respond to legal process, to investigate or remedy potential violations of our policies, or to protect the rights, property, and safety of others, we may share your information as permitted or required by any applicable law, rule, or regulation.",
+                        "### Third-Party Service Providers",
+                        "We may share your information with third parties that perform services for us or on our behalf, including data storage, hosting services, and push notification delivery. Our main service providers are:",
+                        "- Supabase: For database management and user authentication.",
+                        "- Amazon Web Services (AWS): For backend hosting (Lambda), file storage (S3), and content delivery (CloudFront).",
+                        "- Native Notify: For sending push notifications.",
+                        "These third-party vendors have access to your personal information only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose."
+                    ]
+                },
+                {
+                    "heading": "Security of Your Information",
+                    "content": [
+                        "We use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse."
+                    ]
+                },
+                {
+                    "heading": "Your Rights and Choices",
+                    "content": [
+                        "You may at any time review or change the information in your account or terminate your account by:",
+                        "- Logging into your account settings and updating your account.",
+                        "- Contacting us using the contact information provided below to request deletion of your account.",
+                        "Upon your request to terminate your account, we will deactivate or delete your account and information from our active databases."
+                    ]
+                },
+                {
+                    "heading": "Changes to This Privacy Policy",
+                    "content": [
+                        "We may update this Privacy Policy from time to time in order to reflect, for example, changes to our practices or for other operational, legal, or regulatory reasons. We will notify you of any changes by posting the new Privacy Policy on this page."
+                    ]
+                },
+                {
+                    "heading": "Contact Us",
+                    "content": [
+                        "If you have questions or comments about this Privacy Policy, please contact us at: [developerspec25@gmail.com](mailto:developerspec25@gmail.com)"
                     ]
                 }
             ]
