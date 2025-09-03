@@ -1,35 +1,91 @@
-# PEC Events App Download Page
+# GitHub Download Page
 
-A beautiful download page for your GitHub project inspired by Google Play Store.
+A beautiful download page for your GitHub project inspired by Google Play Store, built with Vite + React + TypeScript.
 
-![Preview](./preview.png)
+## Features
 
-### Installation
+- 🎨 Beautiful Material Design UI inspired by Google Play Store
+- 📱 Fully responsive design
+- 🌙 Dark theme support
+- 📸 Screenshot carousel
+- 🔗 Social sharing functionality
+- 📋 App information display
+- 🔒 Privacy policy page
+- ⚡ Built with Vite for fast development and builds
 
-This package gives you an [express router](https://expressjs.com/en/5x/api.html#router) in the form of a function, so you'll need to install [express](https://www.npmjs.com/package/express) to use this router.
+## Quick Start
 
-After this you can install this package using the following command.
-
-```sh
-$ npm i gideon-jacob/pec-events-app#1.0.0
+1. **Clone and install dependencies:**
+```bash
+git clone <your-repo-url>
+cd github-download-page
+npm install
 ```
 
-### Example
+2. **Configure your app:**
+Edit `src/config/siteConfig.ts` to customize your download page:
 
-Here's a simple example of an express application that uses this package.
-
-```ts
-import express from 'express';
-import { downloadPageRouter } from 'pec-events-app-download-page';
-
-const app = express();
-const port = process.env.PORT || 3000;
-
-app.use('/', downloadPageRouter());
-
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
-});
+```typescript
+export const siteConfiguration: ExtendedSiteConfiguration = {
+  application: {
+    name: "Your App Name",
+    description: "Your app description...",
+    github: "username/repository",
+    downloadLink: "https://github.com/username/repository/releases/latest",
+    // ... more configuration
+  },
+  developer: {
+    name: "Your Name",
+    website: "https://yourwebsite.com"
+  },
+  site: {
+    primaryColor: "#03875F", // Your brand color
+    links: [
+      { name: "GitHub", href: "https://github.com/username/repository" }
+    ]
+  }
+}
 ```
 
-The `downloadPageRouter()` function takes an optional [`SiteConfiguration`](./index.d.ts) argument that you can use to configure your download page. If you have any questions feel free to open an issue and I'll get back to you.
+3. **Add your assets:**
+- Replace `public/logo.png` with your app logo
+- Add screenshots to `public/screenshots/` (01.webp, 02.webp, etc.)
+- Replace `public/developer-icon.png` with your developer avatar
+
+4. **Run the development server:**
+```bash
+npm run dev
+```
+
+5. **Build for production:**
+```bash
+npm run build
+```
+
+## Configuration Options
+
+The `siteConfiguration` object supports:
+
+- **Application info**: name, description, version, download links
+- **Developer info**: name, logo, website
+- **Screenshots**: Array of image paths for the carousel
+- **Social links**: Navigation links in the header
+- **Privacy policy**: Custom privacy policy content
+- **Theme**: Primary color customization
+
+## Deployment
+
+After building, deploy the `dist` folder to any static hosting service:
+
+- **Vercel**: `vercel --prod`
+- **Netlify**: Drag and drop the `dist` folder
+- **GitHub Pages**: Push the `dist` folder to `gh-pages` branch
+- **Any static host**: Upload the `dist` folder contents
+
+## Original Project
+
+This is a frontend-only version of [therealsujitk/github-download-page](https://github.com/therealsujitk/github-download-page), rebuilt with Vite for better performance and easier deployment.
+
+## License
+
+MIT License - see LICENSE.md for details.

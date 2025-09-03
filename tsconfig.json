@@ -1,26 +1,7 @@
 {
-  "compilerOptions": {
-    "target": "ES6",
-    "types": [
-      "./index.d.ts",
-      "./frontend/src/@types"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "CommonJS",
-    "moduleResolution": "Node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "removeComments": true,
-    "outDir": "./dist",
-  },
-  "include": [
-    "**/*.ts",
-    "config.json"
-  ],
-  "exclude": ["frontend/*"]
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
 }
